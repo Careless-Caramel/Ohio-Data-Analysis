@@ -1,0 +1,87 @@
+<style>
+  @import url("https://fonts.googlepis.com/css?family=Montserrat:400,800");
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    image-rendering: pixelated;
+    background: url(h.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    height: 100vh;
+    margin: 0 auto;
+}
+.container {
+  background-color: rgb(99, 122, 143, 0.8);
+  border-radius: 10px;
+  width: 768px;
+  max-width: 100%;
+  min-height: 480px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 14px 28px black;
+}
+
+top {
+  color: rgb(56, 189, 189);
+  font-weight: bold;
+  margin: 0;
+}
+
+.center {
+    height: 50px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 70px 0;
+    border: 3px  ;
+    width: 200px;
+}
+
+table, tr, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+tr, td {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 40px;
+}
+div {text-align: center;}
+table{ text-align: center}
+</style>
+<body>  
+  <div class="container">
+    <div class="top">
+  <h1 style="position: relative;top:2px">OHIO Data Analysis</h1>
+    
+  <span><b>Results</b></span>
+
+      <form action = "{{ url_for('submit') }}" method = "get">
+        <!-- <h3>Results</h3> -->
+        <table style="width: 100%" class= "center" border = 1>
+          <thead>
+             <td>OIL</td>
+             <td>GAS</td>
+             <td>BRINE</td>
+          </thead>
+          <tr>
+            <td>{{msg1}}</td>
+            <td>{{msg2}}</td>
+            <td> {{msg3}}</td>
+         </tr>
+         </table>
+      </form>
+      
+      <a href="/">HOME</a>
+    </div>
+    
+  </div>
+</body>
