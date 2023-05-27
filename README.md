@@ -2,7 +2,11 @@
 
 A flask app to manage users along with SQLITE3 
 
-1. First, start by installing all the requirements by the requirements.txt
+First, i have converted the xls file !['data'](https://github.com/Careless-Caramel/Ohio-Data-Analysis/blob/main/20210309_2020_1%20-%204.xls) to a sqlite db file to implement the program. 
+     
+     `20210309_2020_1-4.xls` -> `data.sqlite3`
+      
+1. Start by installing all the requirements by the requirements.txt
 
       `pip install -r requirements.txt`
 2. Run the file by 
